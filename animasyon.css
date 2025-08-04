@@ -1,0 +1,49 @@
+.gecis-animasyonu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #aee1f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: fadeOut 2s ease-out 2s forwards;
+}
+.bulut {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+  top: 40%;
+}
+.bulut1 {
+  left: -200px;
+  animation: bulutSaga 2s ease-in-out forwards;
+}
+.bulut2 {
+  right: -200px;
+  animation: bulutSola 2s ease-in-out forwards;
+}
+.gunes {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #FFD700;
+  border-radius: 50%;
+  bottom: -100px;
+  animation: gunesYukari 2s ease-in-out forwards;
+}
+@keyframes bulutSaga {
+  to { left: 50%; transform: translateX(-200px); }
+}
+@keyframes bulutSola {
+  to { right: 50%; transform: translateX(200px); }
+}
+@keyframes gunesYukari {
+  to { bottom: 30px; }
+}
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veli Paneli - Çocuk Profili</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animasyon.css" />
+</head>
+<body>
+  <div class="gecis-animasyonu" id="animasyon">
+    <div class="bulut bulut1"></div>
+    <div class="bulut bulut2"></div>
+    <div class="gunes"></div>
+  </div>
+
+  <main class="form-kapsayici">
+    <h2>Çocuk Profil Bilgileri</h2>
+    <form id="profilForm">
+      <label>Adı: <input type="text" required /></label>
+      <label>Yaşı: <input type="number" required /></label>
+      <label>Cinsiyeti:
+        <select required>
+          <option value="">Seçiniz</option>
+          <option value="erkek">Erkek</option>
+          <option value="kız">Kız</option>
+        </select>
+      </label>
+      <label>Duyusal Profil:
+        <select required>
+          <option value="">Seçiniz</option>
+          <option value="hipo">Hiposensitif</option>
+          <option value="hiper">Hipersensitif</option>
+          <option value="karma">Karma / Hafif</option>
+        </select>
+      </label>
+      <button type="submit">Devam Et</button>
+    </form>
+  </main>
+
+  <script src="gecis.js"></script>
+</body>
+</html>
