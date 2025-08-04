@@ -1,50 +1,122 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DuyuBOX - Kutu Özelleştir</title>
-  
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DuyuBOX - Kutu Özelleştirme</title>
   <link rel="stylesheet" href="f_animasyon.css" />
-
+  <style>
+    body {
+      background-color: #d9f0fa;
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+      font-family: 'Georgia', serif;
+      margin-bottom: 1.5rem;
+    }
+    .aciklama {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .kutular {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .kart {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 280px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .kart h3 {
+      margin-top: 0;
+      color: #5d8aa8;
+      font-size: 1.2rem;
+    }
+    .kart p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+    }
+    .btn {
+      display: block;
+      margin: 2rem auto;
+      background-color: #5d8aa8;
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #3e6275;
+    }
+  </style>
 </head>
 <body>
   <div class="gecis-kapsayici" id="gecis">
-  <div class="kusu"></div>
-</div>
-  <main class="kutu-secenekleri">
-    <h2>Kutu İçeriğini Özelleştir</h2>
+    <div class="kusu"></div>
+  </div>
 
-    <section class="kutu">
-      <h3>Hiposensitif Çocuklar İçin</h3>
-      <ul>
-        <li><button>Koku kartları</button></li>
-        <li><button>Titreşimli oyuncak</button></li>
-        <li><button>Işıklı top</button></li>
-      </ul>
-    </section>
+  <main>
+    <h2>Öğrencimize Uygun Kutu İçeriğini Seçelim</h2>
+    <div class="aciklama">
+      Girdiğiniz bilgiler doğrultusunda <strong>“Duyusal Keşif Kutusu”</strong> ve <strong>“İşitsel Odak Kutusu”</strong> öğrencinizi en iyi tanımlayabilir.<br><br>
+      Aşağıda önerilen içerikler, çocuğunuzun yaş grubuna uygun <strong>fen bilimleri kazanımlarıyla</strong> ilişkilendirilmiştir. İçeriği seçerek özelleştirebilirsiniz.
+    </div>
 
-    <section class="kutu">
-      <h3>Hipersensitif Çocuklar İçin</h3>
-      <ul>
-        <li><button>Dokulu yumuşak bezler</button></li>
-        <li><button>Gürültü azaltıcı kulaklık</button></li>
-        <li><button>Yumuşak ağırlıklı battaniye</button></li>
-      </ul>
-    </section>
+    <div class="kutular">
+      <div class="kart">
+        <h3>Renk Değiştiren Sıvılar</h3>
+        <p><strong>Kazanım:</strong> Madde ve ısı etkileşimi</p>
+        <p><strong>Materyaller:</strong> Termokromik sıvılar, damlalık, plastik kap</p>
+      </div>
 
-    <section class="kutu">
-      <h3>Karma/Hafif Profiller</h3>
-      <ul>
-        <li><button>Renkli hikaye kitapları</button></li>
-        <li><button>Hafif dokunsal hamur</button></li>
-        <li><button>Denge tahtası</button></li>
-      </ul>
-    </section>
+      <div class="kart">
+        <h3>Titreşimli Ses Kutusu</h3>
+        <p><strong>Kazanım:</strong> Sesin yayılması ve titreşim</p>
+        <p><strong>Materyaller:</strong> Ahşap kutu, lastik, çubuk</p>
+      </div>
 
-    <button id="devamEt" class="btn">Geri Bildirim Sayfasına Geç</button>
+      <div class="kart">
+        <h3>Işık ve Gölge Panosu</h3>
+        <p><strong>Kazanım:</strong> Işık kaynağı ve gölge oluşumu</p>
+        <p><strong>Materyaller:</strong> Mini projektör, karton figürler</p>
+      </div>
+
+      <div class="kart">
+        <h3>Kokulu Sınıflandırma</h3>
+        <p><strong>Kazanım:</strong> Duyu organlarının sınıflandırılması</p>
+        <p><strong>Materyaller:</strong> Lavanta, nane, limon kabı</p>
+      </div>
+    </div>
+
+    <button class="btn" onclick="devam()">Sonraki Adım: Geri Bildirim</button>
   </main>
+
   <script src="f_animasyon.js"></script>
+  <script>
+    function devam() {
+      const anim = document.getElementById("gecis");
+      anim.style.display = "block";
+      setTimeout(() => {
+        window.location.href = "veli_geri_bildirim.html";
+      }, 2500);
+    }
+  </script>
 </body>
 </html>
