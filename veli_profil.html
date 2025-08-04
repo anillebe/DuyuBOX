@@ -3,14 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DuyuBOX - Veli Profili</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>DuyuBOX - Öğrenci Profili</title>
   <link rel="stylesheet" href="f_animasyon.css" />
   <style>
+    body {
+      background-color: #d9f0fa;
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
     main {
       max-width: 700px;
       margin: 0 auto;
       padding: 2rem;
+    }
+    h2 {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      font-size: 2rem;
+      color: #444;
+      margin-bottom: 2rem;
     }
     form {
       display: flex;
@@ -50,10 +62,6 @@
     button:hover {
       background-color: #3e6275;
     }
-    body {
-      background-color: #d9f0fa;
-      font-family: "Segoe UI", sans-serif;
-    }
   </style>
 </head>
 <body>
@@ -62,9 +70,9 @@
   </div>
 
   <main>
-    <h2>Çocuk Profil Bilgileri</h2>
+    <h2>Öğrenci Profili</h2>
     <form id="profilForm">
-      <label>Çocuğun Adı:
+      <label>Öğrencinin Adı:
         <input type="text" required />
       </label>
 
@@ -72,7 +80,7 @@
         <input type="number" required />
       </label>
 
-      <label>Gelişim Yaşı:
+      <label>Gelişim Yaşı (varsa):
         <input type="text" placeholder="Örneğin: 4 yaş 6 ay" />
       </label>
 
@@ -87,9 +95,9 @@
       <label>Duyusal Profil:
         <select required>
           <option value="">Seçiniz</option>
-          <option value="hipo">Hiposensitif</option>
-          <option value="hiper">Hipersensitif</option>
-          <option value="karma">Karma / Hafif</option>
+          <option value="hipo">Hiposensitif (uyaranlara az tepki)</option>
+          <option value="hiper">Hipersensitif (uyaranlara aşırı duyarlılık)</option>
+          <option value="karma">Karma / Hafif (değişken tepkiler)</option>
         </select>
       </label>
 
