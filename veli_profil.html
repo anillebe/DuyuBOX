@@ -3,21 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DuyuBOX - Çocuk Profili</title>
-  
+  <title>DuyuBOX - Veli Profili</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="f_animasyon.css" />
-
+  <style>
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #333;
+    }
+    input, select, textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      padding: 0.8rem;
+      background-color: #5d8aa8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3e6275;
+    }
+    body {
+      background-color: #d9f0fa;
+      font-family: "Segoe UI", sans-serif;
+    }
+  </style>
 </head>
 <body>
   <div class="gecis-kapsayici" id="gecis">
-  <div class="kusu"></div>
-</div>
-  <main class="form-kapsayici">
+    <div class="kusu"></div>
+  </div>
+
+  <main>
     <h2>Çocuk Profil Bilgileri</h2>
     <form id="profilForm">
-      <label>Adı: <input type="text" required /></label>
-      <label>Yaşı: <input type="number" required /></label>
+      <label>Çocuğun Adı:
+        <input type="text" required />
+      </label>
+
+      <label>Yaşı:
+        <input type="number" required />
+      </label>
+
+      <label>Gelişim Yaşı:
+        <input type="text" placeholder="Örneğin: 4 yaş 6 ay" />
+      </label>
+
       <label>Cinsiyeti:
         <select required>
           <option value="">Seçiniz</option>
@@ -25,6 +83,7 @@
           <option value="kız">Kız</option>
         </select>
       </label>
+
       <label>Duyusal Profil:
         <select required>
           <option value="">Seçiniz</option>
@@ -33,9 +92,19 @@
           <option value="karma">Karma / Hafif</option>
         </select>
       </label>
+
+      <label>İlgi Duyduğu Temalar:
+        <input type="text" placeholder="Örneğin: Hayvanlar, Müzik, Renkler" />
+      </label>
+
+      <label>Eklemek İstediğiniz Bilgiler:
+        <textarea rows="4" placeholder="Örneğin: Sabah saatlerinde daha dikkatli oluyor, lavanta kokusunu seviyor..."></textarea>
+      </label>
+
       <button type="submit">Devam Et</button>
     </form>
   </main>
+
   <script src="f_animasyon.js"></script>
 </body>
 </html>
